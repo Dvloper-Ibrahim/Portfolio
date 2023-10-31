@@ -2,7 +2,7 @@
 let navbar = document.querySelector(".navbar");
 let navbarLinks = document.querySelectorAll(".navbar .navbar-nav .nav-link");
 
-document.addEventListener("scroll", function () {
+window.addEventListener("scroll", function () {
   if (window.scrollY > 100) {
     navbar.classList.add("shadow");
   } else {
@@ -36,7 +36,7 @@ sendEmail.addEventListener("click", function (e) {
 // =====================================================
 // Scroll To Top Button
 const scrollToTop = document.querySelector(".rowup");
-window.addEventListener("scroll", () => {
+document.addEventListener("scroll", () => {
   const scrollPos = window.scrollY;
   const viewportHeight = window.innerHeight;
 
