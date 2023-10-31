@@ -36,7 +36,7 @@ sendEmail.addEventListener("click", function (e) {
 // =====================================================
 // Scroll To Top Button
 const scrollToTop = document.querySelector(".rowup");
-document.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
   const scrollPos = window.scrollY;
   const viewportHeight = window.innerHeight;
 
