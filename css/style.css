@@ -195,8 +195,58 @@ body > :nth-child(even) {
 /* Services */
 /* ===================================================== */
 /* Portfolio */
+#portfolio .carousel-control-prev {
+  top: 50%;
+  transform: translateY(-35%);
+  left: -60px;
+}
+#portfolio .carousel-control-next {
+  top: 50%;
+  transform: translateY(-35%);
+  right: -60px;
+}
+@media (max-width: 767px) {
+  #portfolio .carousel-control-prev {
+    left: 0;
+  }
+  #portfolio .carousel-control-next {
+    right: 0;
+  }
+}
+
+#portfolio .carousel-control-prev-icon,
+#portfolio .carousel-control-next-icon {
+  background-color: white;
+  padding: 20px;
+  background-image: none;
+  border: 2px solid #909090;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  transition: 0.2s;
+}
+#portfolio .carousel-control-prev-icon:hover,
+#portfolio .carousel-control-next-icon:hover {
+  box-shadow: 0 0 5px 2px #aeaaaa;
+}
+
+#portfolio .carousel-control-prev-icon span,
+#portfolio .carousel-control-next-icon span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid;
+  transform: rotate(45deg);
+}
+#portfolio .carousel-control-prev-icon span {
+  border-color: transparent transparent #909090 #909090;
+}
+#portfolio .carousel-control-next-icon span {
+  border-color: #909090 #909090 transparent transparent;
+}
+
 #portfolio .project {
-  width: 100%;
+  width: 40%;
   height: 300px;
   overflow: hidden;
 }
@@ -234,7 +284,7 @@ body > :nth-child(even) {
 }
 
 #portfolio .project div {
-  height: 125px;
+  min-height: 125px;
   bottom: 0;
   transition: 0.3s;
   transform: translateY(100%);
@@ -243,6 +293,15 @@ body > :nth-child(even) {
   transform: translateY(1px);
 }
 
+@media (max-width: 768px) {
+  #portfolio .project {
+    width: 100%;
+    height: 250px;
+  }
+  #portfolio .project::before {
+    font-size: 1.5rem;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   #portfolio .project {
     height: 250px;
